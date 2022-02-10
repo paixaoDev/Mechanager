@@ -10,7 +10,7 @@ A Unity Game
 ### Como clonar?
 Voce pode usar qualquer programa ou puxar via terminal com o codigo:
 
-`git clone "link do repo"`
+`git clone git@github.com:paixaoDev/Mechanager.git`
 
 ### Como nomear as branchs?
 `fix/branch_name` **[Fix]** quando for resolver um bug
