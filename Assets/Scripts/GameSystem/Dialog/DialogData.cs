@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dialog", menuName = "Dialogs/DialogItem", order = 1)]
