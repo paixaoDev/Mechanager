@@ -24,3 +24,17 @@ exemplos: `adicionei movimento`, `fiz arte da nave`, `resolvi bug #fff`
 ### O que fazer com bugs?
 Avise a equipe ou crie uma **issue** dizendo o que aconteceu  
 depois uma branch de fix para resolver
+
+## Doc
+
+### Dialog
+O dialogo e adiministrado por dua classes **DialogUIItem** e **DialogController** 
+utilizando uma classe do tipo ScriptedObject que carrega os valores de cada dialog  
+Os dialogs sao usados no jogo como uma forma de criar eventos para o jogador realizar
+
+### Como criar um novo Dialog?
+Para criar um novo Dialog voce precisa ir em Assets/Create/Dialog/**DialogItem**
+O que contem em um Dialog:
+'''c#
+public string message;
+'''
