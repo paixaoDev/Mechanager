@@ -35,6 +35,14 @@ Os dialogs sao usados no jogo como uma forma de criar eventos para o jogador rea
 ### Como criar um novo Dialog?
 Para criar um novo Dialog voce precisa ir em Assets/Create/Dialog/**DialogItem**
 O que contem em um Dialog:
-'''c#
+
+```c#
 public string message;
-'''
+public Sprite image;
+public AudioClip sfx;
+public EventData eventToExecute;
+
+[HideInInspector] public GameObject dialogPrefab;
+```
+
+**eventToExecute** e a classe que tem a lista de eventos a serem executados ao inicio deste Dialog aparecer
