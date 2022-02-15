@@ -59,9 +59,10 @@ Temos uma classe de pai chamada **Comand** que cria um processo de entrada e fin
 ### Como criar um Comand
 Para ter um event funcionando perfeitamente voce deve criar uma classe publica extendendo de **Comand** e fazer override dos metodos **StartCommad** e **FinishCommad** para adiministrar o tempo de vida do seu script
 
-- **StartComand** seria o Start da Unity, mas para o padrao Comand
-- **FinishCommand** este evento deve ser executado ao fim do seu evento criado, nele eh executado um callback para outro script ou sistema 
-- **InitComand** este metodo inicia o evento em si, dentro dele deve ser passado um metodo que sera executado ao evento finalizar
+
+- **InitComand** Este metodo deve ser chamado pela classe que queira iniciar o Comand
+- **StartComand** Este metodo e chamado depois do InitComand
+- **FinishCommand** Este metodo deve ser chamado quando o Comand finalizar
 
 ```c#
 public class Comand : MonoBehaviour
