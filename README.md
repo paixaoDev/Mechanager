@@ -56,7 +56,7 @@ public EventData eventToExecute;
 O sistema de eventos e responsavel por adiministrar e desenvolver eventos do tipo **Unity Event** para serem utilizados dentro do projeto  
 Temos uma classe de pai chamada **Comand** que cria um processo de entrada e finalizacao dos eventos com um callback
 
-### Como criar um Event
+### Como criar um Comand
 Para ter um event funcionando perfeitamente voce deve criar uma classe publica extendendo de **Comand** e fazer override dos metodos **StartCommad** e **FinishCommad** para adiministrar o tempo de vida do seu script
 
 - **StartComand** seria o Start da Unity, mas para o padrao Comand
