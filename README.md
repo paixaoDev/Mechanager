@@ -28,15 +28,15 @@ depois uma branch de fix para resolver
 ## Doc
 
 ### Dialog
-O dialogo e adiministrado por duas classes **DialogUIItem** e **DialogController** 
+O dialogo e adiministrado por duas classes **DialogUIItem** e **DialogController**  
 utilizando uma classe do tipo ScriptedObject que carrega os valores de cada dialog  
-Os dialogs sao usados no jogo como uma forma de criar eventos para o jogador realizar
+Os dialogs sao usados no jogo como uma forma de criar eventos para o jogador realizar  
 
-- DialogUIItem e responsavel por apresentar dialogos em tela
-- DialogController e responsavel por gerenciar e enviar os dialogos para o DialogUIItem alem de executar os eventos
+- **DialogUIItem** e responsavel por apresentar dialogos em tela
+- **DialogController** e responsavel por gerenciar e enviar os dialogos para o **DialogUIItem** alem de executar os eventos
 
 ### Como criar um novo Dialog?
-Para criar um novo Dialog voce precisa ir em Assets/Create/Dialog/**DialogItem**
+Para criar um novo Dialog voce precisa ir em Assets/Create/Dialog/**DialogItem**  
 O que contem em um Dialog:
 
 ```c#
