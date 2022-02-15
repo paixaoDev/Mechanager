@@ -40,9 +40,11 @@ O que contem em um Dialog:
 public string message;
 public Sprite image;
 public AudioClip sfx;
+public bool show = true;
 public EventData eventToExecute;
 
 [HideInInspector] public GameObject dialogPrefab;
 ```
 
 **eventToExecute** e a classe que tem a lista de eventos a serem executados ao inicio deste Dialog aparecer
+**show** diz se o evento vai ou nao ser exibido na UI **quando nao exibido os eventos serao executados assim que o Dialog for instanciado**
