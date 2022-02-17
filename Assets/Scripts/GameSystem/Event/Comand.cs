@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine;
 
 [System.Serializable]
-public class Comand : MonoBehavior
+public class Comand : MonoBehaviour
 {
     //evento de listener que executa quanto este comando finaliza
     UnityEvent returnListener;
