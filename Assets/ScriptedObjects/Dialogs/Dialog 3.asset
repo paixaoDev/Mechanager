@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9988c749ba6ec4ca672430ee3b776d, type: 3}
   m_Name: Dialog 3
   m_EditorClassIdentifier: 
-  message: Teste de Dialogo 03
+  message: Chute Direito
   image: {fileID: 0}
   sfx: {fileID: 0}
   show: 1

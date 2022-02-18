@@ -17,10 +17,7 @@ public class Comand : MonoBehaviour
         StartComand();
     }
 
-    internal virtual void StartComand ()
-    {
-        
-    }
+    internal virtual void StartComand () {}
 
     internal virtual void FinishComand ()
     {

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d9988c749ba6ec4ca672430ee3b776d, type: 3}
-  m_Name: Dialog1
+  m_Name: Dialog1 1
   m_EditorClassIdentifier: 
-  message: Soco Direito
+  message: Soco Esquerdo
   image: {fileID: 0}
   sfx: {fileID: 0}
   show: 1
