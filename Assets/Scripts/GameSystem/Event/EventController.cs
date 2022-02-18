@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
+using System;
 
 //Lista de eventos
 public class EventController : MonoBehaviour
@@ -11,18 +12,20 @@ public class EventController : MonoBehaviour
     public void Start (){
         foreach (EventData eventData in events)
         {
+            gameObject.AddComponent(Type.GetType(eventData.comand.name));
             eventData.dialog = DialogController.instance.RequestNewDialog(eventData.dialog);
         }
     }
 
     public void ExecuteEvent (){
-        UnityEvent myEvent = new UnityEvent();
-        myEvent.AddListener(RemoveFirtEvent);
-        events[0].comand.InitComand(myEvent);
+        var comand = gameObject.GetComponent(Type.GetType(events[0].comand.name)) as Comand;
+        Debug.Log("Executa");
+        comand.InitComand();
     }
 
     public void AddEvent (EventData eventData){
         eventData.dialog = DialogController.instance.RequestNewDialog(eventData.dialog);
+        gameObject.AddComponent(Type.GetType(eventData.comand.name));
         events.Add(eventData);
     }
 

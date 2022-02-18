@@ -6,19 +6,22 @@ using UnityEngine;
 [System.Serializable]
 public class Comand : MonoBehaviour
 {
-    //evento de listener que executa quanto este comando finaliza
     UnityEvent returnListener;
 
-    //Metodo Para iniciar comando
     public void InitComand(UnityEvent returnListener){
         this.returnListener = returnListener;
         StartComand();
     }
 
-    //Metodo virtual utilizado por classe filha para customizar comando - inicio
-    internal virtual void StartComand (){}
+     public void InitComand(){
+        StartComand();
+    }
 
-    //Metodo virtual utilizado por classe filha para customizar comando - fim
+    internal virtual void StartComand ()
+    {
+        
+    }
+
     internal virtual void FinishComand ()
     {
         this.returnListener?.Invoke();

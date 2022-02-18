@@ -1430,7 +1430,8 @@ MonoBehaviour:
   keyActive: Submit
   afterTime: 0
   timeToActivate: 0
-  activatingTags: []
+  activatingTags:
+  - Player
   eventToCall:
     m_PersistentCalls:
       m_Calls:
@@ -1854,6 +1855,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
-  - {fileID: 11400000, guid: 487d499ef449796cdbe8ea308d78c477, type: 2}
-  - {fileID: 11400000, guid: f795e9961ae8c6933942af8a82ff9072, type: 2}
-  - {fileID: 11400000, guid: 487d499ef449796cdbe8ea308d78c477, type: 2}
+  - {fileID: 11400000, guid: d1212f4238a0990c98517aaf93d71edd, type: 2}
+  - {fileID: 11400000, guid: d1212f4238a0990c98517aaf93d71edd, type: 2}
+  - {fileID: 11400000, guid: d1212f4238a0990c98517aaf93d71edd, type: 2}

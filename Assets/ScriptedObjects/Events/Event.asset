@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9988c749ba6ec4ca672430ee3b776d, type: 3}
-  m_Name: Dialog 2
+  m_Script: {fileID: 11500000, guid: 5526c9f8bdd9b31c3ab6c407d6124538, type: 3}
+  m_Name: Event
   m_EditorClassIdentifier: 
-  message: Teste de Dialogo 02
-  image: {fileID: 0}
-  sfx: {fileID: 0}
-  show: 1
-  dialogPrefab: {fileID: 0}
+  comand: {fileID: 11500000, guid: 02909b3677c8f008baca8bd22a2d55f7, type: 3}
+  dialog: {fileID: 11400000, guid: 70a95603074e62ee8930fc0923d5cdcc, type: 2}
