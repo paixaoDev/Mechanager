@@ -44,7 +44,6 @@ public string message;
 public Sprite image;
 public AudioClip sfx;
 public bool show = true;
-public EventData eventToExecute;
 
 [HideInInspector] public GameObject dialogPrefab;
 ```
@@ -84,5 +83,27 @@ public class Comand : MonoBehaviour
     {
         this.returnListener?.Invoke();
     }
+}
+```
+
+### Como Criar um Evento
+O evento e a juncao de um **Comand** e de um **Dialog** ele serve para armazenar de forma inteligente quais eventos teremos para serem executados em nosso jogo.
+
+```c#
+public class EventData : ScriptableObject 
+{
+    public Object comand;
+    public DialogData dialog;
+}
+```
+
+O **Comand** dentro de um evento e puxado e instanciado no **EventController**, isso impede que se possa passar um parametro para este evento, isso apesar de tudo ajuda com que os **Comands** contruidos sejam mais precisos em seu comportamento
+
+```c#
+//Exemplo de como um comand e adicionado e executado
+public void ExecuteEvent (){
+    gameObject.AddComponent(Type.GetType(eventData.comand.name));
+    var comand = gameObject.GetComponent(Type.GetType(events[0].comand.name)) as Comand;
+    comand.InitComand();
 }
 ```
