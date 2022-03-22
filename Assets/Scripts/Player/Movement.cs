@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     Vector3 velocity;
     Vector3 lastPos;
@@ -21,8 +22,16 @@ public class Movement : MonoBehaviour
         //Rotate(RotationByInput(inputVector));
         GetPlayerVelocity();
 
+        if(inputVector.x > 0){
+            spriteRenderer.flipX = false;
+        }else if (inputVector.x < 0){
+            spriteRenderer.flipX = true;
+        }
+
         //animator.SetBool("equiped spike", hookAinming);
         //animator.SetFloat("velocity", velocity.magnitude);
+        animator.SetFloat("directionX", inputVector.x);
+        animator.SetFloat("directionY", inputVector.y);
     }
 
     void GetPlayerVelocity (){
