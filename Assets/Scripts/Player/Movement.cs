@@ -9,17 +9,22 @@ public class Movement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [SerializeField] List<AudioClip> walkAudio;
+
+    [SerializeField] AudioSource source;
+
     Vector3 velocity;
     Vector3 lastPos;
+
+    float walkTimer = .4f;
+    float timer = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        //Vetor 2D do input, representando o movimento horizontal e vertical do input
         var inputVector = InputMovementToVector();
 
         Move(inputVector);
-        //Rotate(RotationByInput(inputVector));
         GetPlayerVelocity();
 
         if(inputVector.x > 0){
@@ -28,10 +33,17 @@ public class Movement : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
-        //animator.SetBool("equiped spike", hookAinming);
-        //animator.SetFloat("velocity", velocity.magnitude);
         animator.SetFloat("directionX", inputVector.x);
         animator.SetFloat("directionY", inputVector.y);
+
+        if(velocity != Vector3.zero){
+            if(timer > walkTimer){
+                WalkAudio();
+                timer = 0;
+            }else{
+                timer += Time.deltaTime;
+            }
+        }
     }
 
     void GetPlayerVelocity (){
@@ -65,5 +77,10 @@ public class Movement : MonoBehaviour
     void Rotate(Quaternion direction)
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, direction, Time.deltaTime * 8);
+    }
+
+    void WalkAudio (){
+        source.clip = walkAudio[Random.Range(0, walkAudio.Count)];
+        source.Play();
     }
 }

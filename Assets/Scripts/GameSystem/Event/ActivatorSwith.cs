@@ -57,7 +57,7 @@ public class ActivatorSwith : MonoBehaviour
 
         //Se tiver algum som ao ser ativado
         if (this.activationSound != null){
-            //AudioController.instance.SetClip(activationSound);
+            AudioController.instance.PlaySfx(activationSound);
         }
 
         this.eventToCall.Invoke ();
